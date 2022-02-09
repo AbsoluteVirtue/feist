@@ -8,6 +8,7 @@ Compiled with g++ ver. 8.1.0 using MinGW-W64 GCC port, with c++17 flag enabled.
 1. First round consists of obtaining the function **f1** by applying the exclusive-or (*XOR*) operation on the left half of the private key (K1) and the right half of the payload (R1):
 
 f1 = xor(R1, K1)
+
 2. By XORing the function obtained in the previous step with the left part of the payload (L1) a new value is produced. It will serve as input for the next step of obtaining the function **f2**:
 
 R2 = xor(f1, L1)
@@ -15,6 +16,7 @@ R2 = xor(f1, L1)
 L2 = R1
 
 f2 = xor(R2, K2)
+
 3. Finally, L3 and R3 are concatenated to form the finished ciphertext:
 
 R3 = xor(f2, L2)
@@ -22,6 +24,7 @@ R3 = xor(f2, L2)
 L3 = R2
 
 Ciphertext = L3 + R3
+
 4. To decipher the message using the same key (hense the symmetrical nature of the cipher), the same steps are repeated:
 
 L4 = L3
