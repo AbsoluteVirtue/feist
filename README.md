@@ -4,7 +4,7 @@ A toy example of a working Feistel cypher, please don't use it for any kind of c
 Compiled with g++ ver. 8.1.0 using MinGW-W64 GCC port, with c++17 flag enabled. 
 
 # Description
-0. Preliminary steps include splitting plaintext into two halves (L1 and R1), with the private key also split into two halfes of corresponding lengths (K1 and K2). 
+0. Preliminary steps include splitting plaintext into two halves (L1 and R1), with the private key also split into two halves of corresponding lengths (K1 and K2). 
 1. First round consists of obtaining the function **f1** by applying the exclusive-or (*XOR*) operation on the left half of the private key (K1) and the right half of the payload (R1):
 
 f1 = xor(R1, K1)
